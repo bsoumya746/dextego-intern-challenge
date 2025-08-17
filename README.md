@@ -73,3 +73,6 @@ This project has several issues that need to be fixed. Your task is to:
 - TypeScript
 - TailwindCSS
 - Lucide React (for icons)
+
+## Time Spent
+  - 5 Hours
