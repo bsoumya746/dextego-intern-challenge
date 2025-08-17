@@ -1,6 +1,19 @@
 {
   "calls": [
     {
+      "id": "1755446551995",
+      "duration": 41,
+      "outcome": "qualified",
+      "sentimentScore": 76,
+      "date": "2025-08-17T16:02:31.995Z",
+      "revenue": 0,
+      "prospectName": "",
+      "status": "completed",
+      "talkTimeRatio": 0,
+      "questionsAsked": 0,
+      "tags": []
+    },
+    {
       "id": "call_001",
       "prospectName": "John Smith",
       "date": "2024-08-15T10:30:00Z",
@@ -11,7 +24,11 @@
       "questionsAsked": 12,
       "sentimentScore": 0.8,
       "notes": "Very interested in our AI coaching features. Mentioned budget of $50K.",
-      "tags": ["enterprise", "ai-coaching", "hot-lead"]
+      "tags": [
+        "enterprise",
+        "ai-coaching",
+        "hot-lead"
+      ]
     },
     {
       "id": "call_002",
@@ -24,7 +41,10 @@
       "questionsAsked": 8,
       "sentimentScore": 0.6,
       "notes": "Needs to discuss with team. Follow up next week.",
-      "tags": ["mid-market", "follow-up"]
+      "tags": [
+        "mid-market",
+        "follow-up"
+      ]
     },
     {
       "id": "call_003",
@@ -37,7 +57,10 @@
       "questionsAsked": 5,
       "sentimentScore": 0.3,
       "notes": "Budget too small for our platform. Referred to competitor.",
-      "tags": ["small-business", "budget-constraint"]
+      "tags": [
+        "small-business",
+        "budget-constraint"
+      ]
     },
     {
       "id": "call_004",
@@ -50,7 +73,11 @@
       "questionsAsked": 15,
       "sentimentScore": 0.9,
       "notes": "Signed annual contract! Very excited about implementation.",
-      "tags": ["enterprise", "closed-won", "annual-contract"]
+      "tags": [
+        "enterprise",
+        "closed-won",
+        "annual-contract"
+      ]
     },
     {
       "id": "call_005",
@@ -63,7 +90,10 @@
       "questionsAsked": 0,
       "sentimentScore": 0,
       "notes": "Upcoming call scheduled for today.",
-      "tags": ["scheduled", "demo"]
+      "tags": [
+        "scheduled",
+        "demo"
+      ]
     }
   ]
 }

@@ -14,6 +14,9 @@
 	•	GET /api/calls → returns all calls.
 	•	POST /api/calls → later, you can extend it to add a new call.
 	•	GET /api/calls/[id] → returns a single call by ID.
+5. Added theme switching feature to switch between dark and light mode.
+6. Added data visualisation charts.
+7. Added form to add new calls.
 
 ## Getting Started
 

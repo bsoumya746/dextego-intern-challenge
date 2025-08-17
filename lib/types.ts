@@ -1,4 +1,6 @@
 export interface Call {
+  customer: any;
+  product: any;
   id: string;
   prospectName: string;
   date: string;

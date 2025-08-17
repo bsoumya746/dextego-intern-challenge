@@ -1,28 +1,19 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { Header } from '../components/Header'
+import "./globals.css"
+import { ThemeProvider } from "next-themes"
+import { Header } from "../components/Header"
 
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'Dextego Sales Dashboard',
-  description: 'Sales call analytics and coaching insights',
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {/* The body gradient and text color are now handled in globals.css */}
           <Header />
-          <main>{children}</main>
-        </div>
+          <main className="min-h-screen px-4 py-8">
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
