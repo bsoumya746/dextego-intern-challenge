@@ -1,7 +1,13 @@
 # Dextego Sales Dashboard - Intern Assignment
 
 ## Working Application Demo
-🎥 [Demo Video](https://github.com/bsoumya746/dextego-intern-challenge/blob/main/Screenrecording/Screen%20Recording%202025-08-17%20at%2010.29.16%E2%80%AFPM.mov)
+
+![Screenshot-01](https://github.com/bsoumya746/dextego-intern-challenge/blob/main/Screenrecording/Screenshot-01.png)
+![Screenshot-02](https://github.com/bsoumya746/dextego-intern-challenge/blob/main/Screenrecording/Screenshot-02.png)
+![Screenshot-01](https://github.com/bsoumya746/dextego-intern-challenge/blob/main/Screenrecording/Screenshot-03.png)
+![Screenshot-01](https://github.com/bsoumya746/dextego-intern-challenge/blob/main/Screenrecording/Screenshot-04.png)
+
+
 
 
 ## Fixed Issues
