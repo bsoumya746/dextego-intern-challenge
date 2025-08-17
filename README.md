@@ -1,5 +1,9 @@
 # Dextego Sales Dashboard - Intern Assignment
 
+## Working Application Demo
+![Screenshot (Desktop)](https://github.com/bsoumya746/dextego-intern-challenge/blob/main/Screenrecording/Screen%20Recording%202025-08-17%20at%2010.29.16%E2%80%AFPM.mov)
+
+
 ## Fixed Issues
 
 1. Installed the missing clsx package.
