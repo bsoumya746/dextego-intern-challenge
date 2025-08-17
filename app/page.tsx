@@ -35,9 +35,18 @@ export default function Dashboard() {
 
   const stats = {
     totalCalls: calls.length,
-    avgDuration: calls.reduce((acc, call) => acc + call.duration, 0) / calls.length / 60,
-    qualifiedRate: (calls.filter(call => call.outcome === 'qualified' || call.outcome === 'closed-won').length / calls.length) * 100,
-    avgSentiment: calls.reduce((acc, call) => acc + call.sentimentScore, 0) / calls.length
+    avgDuration:
+      calls.length > 0
+        ? calls.reduce((acc, call) => acc + call.duration, 0) / calls.length / 60
+        : 0,
+    qualifiedRate:
+      calls.length > 0
+        ? (calls.filter(call => call.outcome === 'qualified' || call.outcome === 'closed-won').length / calls.length) * 100
+        : 0,
+    avgSentiment:
+      calls.length > 0
+        ? calls.reduce((acc, call) => acc + call.sentimentScore, 0) / calls.length
+        : 0,
   }
 
   if (loading) return <LoadingSpinner />
@@ -53,13 +62,14 @@ export default function Dashboard() {
         </p>
       </div>
 
+      {/* Stats Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <div className="bg-white dark:bg-gray-800 rounded-lg border dark:border-gray-700 p-6">
           <div className="flex items-center">
             <Phone className="h-8 w-8 text-blue-600" />
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Total Calls</p>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white">{totalCalls}</p>
+              <p className="text-2xl font-bold text-gray-900 dark:text-white">{stats.totalCalls}</p>
             </div>
           </div>
         </div>
@@ -70,7 +80,7 @@ export default function Dashboard() {
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Avg Duration</p>
               <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                {isNaN(stats.avgDuration) ? '0' : Math.round(stats.avgDuration)}m
+                {Math.round(stats.avgDuration)}m
               </p>
             </div>
           </div>
@@ -82,7 +92,7 @@ export default function Dashboard() {
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Qualified Rate</p>
               <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                {isNaN(stats.qualifiedRate) ? '0' : Math.round(stats.qualifiedRate)}%
+                {Math.round(stats.qualifiedRate)}%
               </p>
             </div>
           </div>
@@ -94,13 +104,14 @@ export default function Dashboard() {
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Avg Sentiment</p>
               <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                {isNaN(stats.avgSentiment) ? '0' : (stats.avgSentiment * 100).toFixed(0)}%
+                {(stats.avgSentiment * 100).toFixed(0)}%
               </p>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Recent Calls Section */}
       <div className="mb-8">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Recent Calls</h2>
         

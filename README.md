@@ -1,5 +1,20 @@
 # Dextego Sales Dashboard - Intern Assignment
 
+## Fixed Issues
+
+1. Installed the missing clsx package.
+2. Installed the missing lucid-react package.
+3. Made the following changes in ./data/calls.json file --
+    1.	Added comma after "notes" in call_002.
+	2.	Added comma after "id": "call_003".
+	3.	Changed "duration" in call_003 to a number, which was a string.
+	4.	Removed the extra trailing comma in "tags": ["small-business", "budget-constraint",].
+	5.	Added a comma between call_004 and call_005.
+4. Made the api/calls structure as below:
+	•	GET /api/calls → returns all calls.
+	•	POST /api/calls → later, you can extend it to add a new call.
+	•	GET /api/calls/[id] → returns a single call by ID.
+
 ## Getting Started
 
 1. Clone the repository

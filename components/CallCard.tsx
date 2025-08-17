@@ -17,13 +17,15 @@ export function CallCard({ call }: CallCardProps) {
               {call.prospectName}
             </h3>
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              {formatDate(callDate)}
+              {formatDate(call.date)}
             </p>
           </div>
-          <span className={cn(
-            "px-2 py-1 rounded-full text-xs font-medium",
-            getOutcomeColor(call.outcome)
-          )}>
+          <span
+            className={cn(
+              "px-2 py-1 rounded-full text-xs font-medium",
+              getOutcomeColor(call.outcome)
+            )}
+          >
             {call.outcome.replace('-', ' ')}
           </span>
         </div>
